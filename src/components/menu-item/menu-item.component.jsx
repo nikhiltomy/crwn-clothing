@@ -1,9 +1,13 @@
-import React from 'react'
-import './menu-item.styles.css';
-export function MenuItem() {
-    return (
-        <div>
-            
-        </div>
-    )
+import React from "react";
+import "./menu-item.styles.scss";
+export function MenuItem({ title, imageUrl, size }) {
+  return (
+    <div className={`${size} menu-item`}>
+      <div className="background-image" style={{ backgroundImage: `url(${imageUrl})` }} />
+      <div className="content">
+        <div className="title">{title.toUpperCase()}</div>
+        <span className="subtitle">SHOP NOW</span>
+      </div>
+    </div>
+  );
 }
